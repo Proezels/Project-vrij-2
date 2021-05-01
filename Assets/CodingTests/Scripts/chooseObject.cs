@@ -8,6 +8,7 @@ public class chooseObject : MonoBehaviour
     public bool inside = false;
     public GameObject scene;
     public GameObject door;
+    public GameObject picture;
     
 
     void OnTriggerEnter (Collider other)
@@ -25,6 +26,7 @@ public class chooseObject : MonoBehaviour
             scene.SetActive(true);
             door.SetActive(false);
             lights.SetActive(false);
+            picture.SetActive(true);
             Destroy(gameObject);
             
         }
