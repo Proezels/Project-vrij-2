@@ -7,6 +7,7 @@ public class hallwayDoor : MonoBehaviour
     Animation anim;
     public bool atDoor = false;
     public bool behindDoor = false;
+    public GameObject portal;
 
 void Start()
 {
@@ -27,6 +28,7 @@ void Update()
      if (other.name == "Player")
      {
         atDoor = true;
+        portal.SetActive(false);
      }
  }
 

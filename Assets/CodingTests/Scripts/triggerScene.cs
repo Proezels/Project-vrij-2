@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class activateSpots : MonoBehaviour
+public class triggerScene : MonoBehaviour
 {
-    public hallwayDoor door;
-    public GameObject spotlight;
+    public GameObject door;
+    public animTrigger anim;
 
     void OnTriggerEnter(Collider other)
     {
         if (other.name == "Player")
         {
-            spotlight.SetActive(true);
-            door.behindDoor = true;
+            door.SetActive(true);
+            anim.triggered = true;
         }
     }
 }
