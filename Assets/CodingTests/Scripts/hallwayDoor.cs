@@ -8,46 +8,50 @@ public class hallwayDoor : MonoBehaviour
     public bool atDoor = false;
     public bool behindDoor = false;
     public GameObject portal;
+    public bool doorOpen = false;
 
-void Start()
-{
-    anim = gameObject.GetComponent<Animation>();
-}
-
-void Update()
-{
-    if (behindDoor)
+    void Start()
     {
-        anim.Play("doorCloseTest");
-        behindDoor = false;
+        anim = gameObject.GetComponent<Animation>();
     }
-}
 
- void OnTriggerEnter (Collider other)
- {
-     if (other.name == "Player")
-     {
-        atDoor = true;
-        portal.SetActive(false);
-     }
- }
+    void Update()
+    {
+        if (behindDoor)
+        {  
+            if (doorOpen)
+            {
+                anim.Play("doorCloseTest");
+                behindDoor = false;
+                doorOpen = false;
+            }
+        }
+    }
 
- void OnTriggerExit (Collider other)
- {
-     if (other.name == "Player")
-     {
-        atDoor = false;
-     }
- }
+    void OnTriggerEnter (Collider other)
+    {
+        if (other.name == "Player")
+        {
+            atDoor = true;
+            portal.SetActive(false);
+        }
+    }
 
- void OnMouseDown()
- {
-     if (atDoor)
-     {
-        anim.Play("doorOpenTest");
-     }
- }
+    void OnTriggerExit (Collider other)
+    {
+        if (other.name == "Player")
+        {
+            atDoor = false;
+        }
+    }
 
-    
+    void OnMouseDown()
+    {
+        if (atDoor)
+        {
+            anim.Play("doorOpenTest");
+            doorOpen = true;
+        }
+    }
 
 }
