@@ -9,6 +9,7 @@ public class playerMovement : MonoBehaviour
 
     public bool teleport = false;
     public Transform startCoord;
+    public bool maskOn = false;
     
     void Start()
     {
