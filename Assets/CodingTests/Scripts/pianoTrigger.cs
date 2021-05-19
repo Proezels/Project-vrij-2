@@ -28,7 +28,6 @@ public class pianoTrigger : MonoBehaviour
     {
         if (inFront)
         {
-            Debug.Log ("click");
             startLight.SetActive(false);
             fullLight.SetActive(true);
         }

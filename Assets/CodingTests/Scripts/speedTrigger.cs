@@ -5,7 +5,7 @@ using UnityEngine;
 public class speedTrigger : MonoBehaviour
 {   
     public playerMovement p1;
-    public float newSpeed = 2f;
+    public float newSpeed = 1f;
     public bool slower = false;
 
     
