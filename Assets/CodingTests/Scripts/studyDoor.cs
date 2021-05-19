@@ -7,17 +7,6 @@ public class studyDoor : MonoBehaviour
     public bool atDoor = false;
     public playerMovement p1;
 
-    void Start()
-    {
-        
-    }
-
-
-    void Update()
-    {
-        
-    }
-
     void OnTriggerEnter(Collider Other)
     {
         if (Other.name == "Player")
@@ -41,7 +30,6 @@ public class studyDoor : MonoBehaviour
     {
         if (atDoor)
         {
-            Debug.Log("open");
             gameObject.SetActive(false);
         }
     }
