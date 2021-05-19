@@ -6,6 +6,12 @@ public class studyDoor : MonoBehaviour
 {
     public bool atDoor = false;
     public playerMovement p1;
+    public Animation anim;
+
+    void Start()
+    {
+        anim = gameObject.GetComponent<Animation>();
+    }
 
     void OnTriggerEnter(Collider Other)
     {
@@ -30,7 +36,7 @@ public class studyDoor : MonoBehaviour
     {
         if (atDoor)
         {
-            gameObject.SetActive(false);
+            anim.Play();
         }
     }
 }
