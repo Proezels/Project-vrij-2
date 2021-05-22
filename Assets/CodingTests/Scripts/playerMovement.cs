@@ -10,10 +10,11 @@ public class playerMovement : MonoBehaviour
     public bool teleport = false;
     public Transform startCoord;
     public bool maskOn = false;
+    public Animator anim;
     
     void Start()
     {
-        
+        anim = gameObject.GetComponent<Animator>();
     }
 
     void Update()
@@ -30,5 +31,10 @@ public class playerMovement : MonoBehaviour
             gameObject.transform.position = startCoord.transform.position;
             teleport = false;
         }
+    }
+
+    void stopAnim()
+    {
+        anim.enabled = !anim.enabled;
     }
 }

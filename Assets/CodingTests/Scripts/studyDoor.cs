@@ -7,10 +7,12 @@ public class studyDoor : MonoBehaviour
     public bool atDoor = false;
     public playerMovement p1;
     public Animation anim;
+    public BoxCollider coll;
 
     void Start()
     {
         anim = gameObject.GetComponent<Animation>();
+        coll = gameObject.GetComponent<BoxCollider>();
     }
 
     void OnTriggerEnter(Collider Other)
@@ -36,7 +38,9 @@ public class studyDoor : MonoBehaviour
     {
         if (atDoor)
         {
+            Debug.Log("Click");
             anim.Play();
+            coll.enabled = !coll.enabled;
         }
     }
 }
