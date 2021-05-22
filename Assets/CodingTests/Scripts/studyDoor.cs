@@ -38,7 +38,6 @@ public class studyDoor : MonoBehaviour
     {
         if (atDoor)
         {
-            Debug.Log("Click");
             anim.Play();
             coll.enabled = !coll.enabled;
         }
