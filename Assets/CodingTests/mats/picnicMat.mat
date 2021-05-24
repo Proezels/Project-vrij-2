@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: fadeMat
+  m_Name: picnicMat
   m_Shader: {fileID: -6465566751694194690, guid: b83dff411f89fd24087d43409290bf50, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -32,12 +32,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_0cfef0022d694f44b8f9c18d1f10ac9e: -0.32
-    - Vector1_a0bae245ca4d4dffaa1795d4df853d19: 0
+    - Vector1_0cfef0022d694f44b8f9c18d1f10ac9e: 0
     - Vector1_b287fd2523e346bc94c7152a7dcc5cf1: 20
     - _fade: 0
     m_Colors:
-    - Color_24ffd7e4193949aba6bcd84be0f1dfcf: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
-    - Color_b626932292d34dfd9acce16ba884ae55: {r: 0, g: 0, b: 0, a: 0}
-    - Color_b626932292d34dfd9acce16ba884ae55_1: {r: 0, g: 0, b: 0, a: 0}
+    - Color_24ffd7e4193949aba6bcd84be0f1dfcf: {r: 0.7830189, g: 0.7830189, b: 0.7830189, a: 0}
   m_BuildTextureStacks: []
