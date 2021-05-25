@@ -16,8 +16,11 @@ public class disappear : MonoBehaviour
     void Start()
     {
     //sets starting color to dark green
-        var green = Color.green * 0.5f;
-        park.color = green;
+        if (park != null)
+        {
+            var green = Color.green * 0.5f;
+            park.color = green;
+        }
         startTime = Time.time;
     }
     
@@ -38,8 +41,14 @@ public class disappear : MonoBehaviour
                 {
                     fadeIn = 1f;
                     fading = false;
-                    park.color = Color.Lerp(park.color, colorEnd, t);
-                    fireflies.SetActive(false);
+                    if (park != null)
+                    {
+                        park.color = Color.Lerp(park.color, colorEnd, t);
+                    }
+                    if (fireflies != null)
+                    {
+                        fireflies.SetActive(false);
+                    }
                 } 
         }
     

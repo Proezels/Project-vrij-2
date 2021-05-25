@@ -6,8 +6,8 @@ public class studyDoor : MonoBehaviour
 {
     public bool atDoor = false;
     public playerMovement p1;
-    public Animation anim;
-    public BoxCollider coll;
+    Animation anim;
+    BoxCollider coll;
 
     void Start()
     {
@@ -19,10 +19,7 @@ public class studyDoor : MonoBehaviour
     {
         if (Other.name == "Player")
         {
-            if (p1.maskOn)
-            {  
                 atDoor = true;
-            }
         }
     }
 
@@ -36,10 +33,14 @@ public class studyDoor : MonoBehaviour
 
     void OnMouseDown ()
     {
-        if (atDoor)
-        {
+        if (p1.maskOn)
+        {  
             anim.Play();
             coll.enabled = !coll.enabled;
+        }
+        else 
+        {
+            gameObject.GetComponent<AudioSource>().Play();
         }
     }
 }
