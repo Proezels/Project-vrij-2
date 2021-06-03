@@ -6,7 +6,7 @@ public class speedTrigger : MonoBehaviour
 {   
     public playerMovement p1;
     public float newSpeed = 1f;
-    public bool slower = false;
+    private bool slower = false;
 
     
     void OnTriggerEnter (Collider other)

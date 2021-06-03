@@ -8,11 +8,18 @@ public class studyDoor : MonoBehaviour
     public playerMovement p1;
     Animation anim;
     BoxCollider coll;
+    public GameObject rain;
+    public deleteRoom delete;
+    public AudioClip[] audioArray;
+    AudioSource audio;
+
 
     void Start()
     {
         anim = gameObject.GetComponent<Animation>();
         coll = gameObject.GetComponent<BoxCollider>();
+        audio = GetComponent<AudioSource>();
+
     }
 
     void OnTriggerEnter(Collider Other)
@@ -35,12 +42,15 @@ public class studyDoor : MonoBehaviour
     {
         if (p1.maskOn)
         {  
+            rain.SetActive(true);
+            delete.outside = true;
             anim.Play();
             coll.enabled = !coll.enabled;
         }
         else 
-        {
-            gameObject.GetComponent<AudioSource>().Play();
+        {        
+            audio.clip = audioArray[Random.Range(0, audioArray.Length)];
+            audio.PlayOneShot(audio.clip);
         }
     }
 }
