@@ -3,7 +3,82 @@ guid: 941a688cd2c5a144bb5be2e49905cd5f
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Fireplace
+    second: {fileID: 2100000, guid: 2461492423f2d254e9700c35eb19591b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_LRfloor
+    second: {fileID: 2100000, guid: 14f0c73cb3cb8364ca3a27c9228d3dbb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_LRroof
+    second: {fileID: 2100000, guid: db7568f3fc4060f458238d3e42403862, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_LRwall
+    second: {fileID: 2100000, guid: 48287cc730fe356429d4715bf7874c61, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Lampshade
+    second: {fileID: 2100000, guid: f70b739b715825249a102b2f25b81a56, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_bulb
+    second: {fileID: 2100000, guid: 49b03fc1b6c55384ea0810ffa67f8a86, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_couch
+    second: {fileID: 2100000, guid: 108696b3d1dcd804a8736900725b214b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_lampstand
+    second: {fileID: 2100000, guid: fba229e3838ce7742946498152d331e7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_pianocushion
+    second: {fileID: 2100000, guid: 99660d11bab1faa488f71853dd4dd2e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_wood
+    second: {fileID: 2100000, guid: 3f80b0e277e8b31498ee84b35f97976b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_xmastree
+    second: {fileID: 2100000, guid: 3403ec71a26c0bf4a8fc82faa85e9920, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: livingroom_handle27SG1
+    second: {fileID: 2100000, guid: 97b1890e864d58c42af58617f71c1b73, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: livingroom_lambert11SG1
+    second: {fileID: 2100000, guid: c5c6db87ab21d2b49859170a546db0e3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: livingroom_lambert5SG1
+    second: {fileID: 2100000, guid: 34df1822411ce1c45bd19d97c1362458, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: livingroom_pPlane2SG1
+    second: {fileID: 2100000, guid: bb920425c7c7e6c4c89b3a4647e96b2f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
