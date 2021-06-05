@@ -16,11 +16,16 @@ public class pianoTrigger : MonoBehaviour
     private float vol = 0f;
     public float increase = 0.005f;
 
+    public GameObject cutsceneCam;
+    public GameObject player;
+    public GameObject fam;
+
     void Start()
     {
         music = gameObject.GetComponent<AudioSource>();
     }
 
+//check if player infront of piano
     void OnTriggerEnter (Collider other)
     {
         if (other.name == "Player")
@@ -37,6 +42,7 @@ public class pianoTrigger : MonoBehaviour
         }
     }
 
+//activate "cuscene", music camera etc.
     void OnMouseDown ()
     {
         if (inFront)
@@ -45,9 +51,14 @@ public class pianoTrigger : MonoBehaviour
             startLight.SetActive(false);
             fullLight.SetActive(true);
             cutscene = true;
+            
+            player.SetActive(false);
+            cutsceneCam.SetActive(true);
+            fam.SetActive(true);
         }
     }
 
+//let's you hum when spacebar is pressed
     void Update()
     {
         if (cutscene)
