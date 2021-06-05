@@ -34,7 +34,7 @@ Material:
     m_Floats:
     - Vector1_0cfef0022d694f44b8f9c18d1f10ac9e: 0
     - Vector1_b287fd2523e346bc94c7152a7dcc5cf1: 20
-    - _fade: 1
+    - _fade: 0
     m_Colors:
     - Color_24ffd7e4193949aba6bcd84be0f1dfcf: {r: 0, g: 0.8560152, b: 1, a: 0}
   m_BuildTextureStacks: []
