@@ -7,8 +7,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: 6c6f45a6bb30516429eb3d78763e50aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Mat_Fireplace
     second: {fileID: 2100000, guid: 2461492423f2d254e9700c35eb19591b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Kidshirt
+    second: {fileID: 2100000, guid: e9851dc9537ccbe49b891d256920ce9a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -32,6 +42,21 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Mat_Maleshirt
+    second: {fileID: 2100000, guid: f8e2139f269d1a0488ee39ce594ffbc3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_blouse
+    second: {fileID: 2100000, guid: e4d31094b769b564398d6d3de96732ad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_book
+    second: {fileID: 2100000, guid: 5d9710fc34745f14d81c5ccc1554d9b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Mat_bulb
     second: {fileID: 2100000, guid: 49b03fc1b6c55384ea0810ffa67f8a86, type: 2}
   - first:
@@ -42,13 +67,33 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Mat_femaleshirt
+    second: {fileID: 2100000, guid: ab2ee3ce79ca8d445b2fdfda37b96b51, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_jeans
+    second: {fileID: 2100000, guid: 58bd5983a5139a24384736c44677ae9f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Mat_lampstand
     second: {fileID: 2100000, guid: fba229e3838ce7742946498152d331e7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Mat_pants2
+    second: {fileID: 2100000, guid: 032ecdd3a41d30b45b30c431e9a8381b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Mat_pianocushion
     second: {fileID: 2100000, guid: 99660d11bab1faa488f71853dd4dd2e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_skin1
+    second: {fileID: 2100000, guid: c9a921574dec0a64f976a2d0b6dcf2bc, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -79,6 +124,21 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: livingroom_pPlane2SG1
     second: {fileID: 2100000, guid: bb920425c7c7e6c4c89b3a4647e96b2f, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: LR_Wall
+    second: {fileID: 2800000, guid: e2db6cd9594412448b2e617dd3ff3221, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: LR_Wall2
+    second: {fileID: 2800000, guid: 48171e7008dd97442b9e8dfd01e3f846, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: books
+    second: {fileID: 2800000, guid: b0405bfb36a51004fa91be11d3cd0906, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
