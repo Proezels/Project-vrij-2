@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class pianoTrigger : MonoBehaviour
 {
-    public GameObject startLight;
-    public GameObject fullLight;
     public bool inFront = false;
-    public AudioSource music;
+    public treeLights tree;
+    AudioSource music;
 
     public bool humming = false;
     public bool mute = true;
@@ -19,6 +18,10 @@ public class pianoTrigger : MonoBehaviour
     public GameObject cutsceneCam;
     public GameObject player;
     public GameObject fam;
+    public GameObject pianoPlayer;
+
+    public GameObject credits;
+    private float creditTimer;
 
     void Start()
     {
@@ -28,7 +31,7 @@ public class pianoTrigger : MonoBehaviour
 //check if player infront of piano
     void OnTriggerEnter (Collider other)
     {
-        if (other.name == "Player")
+        if (other.name == "Player" && tree.lights)
         {
             inFront = true;
         }
@@ -45,16 +48,16 @@ public class pianoTrigger : MonoBehaviour
 //activate "cuscene", music camera etc.
     void OnMouseDown ()
     {
-        if (inFront)
+        if (inFront && cutscene == false)
         {
             music.enabled = !music.enabled;
-            startLight.SetActive(false);
-            fullLight.SetActive(true);
             cutscene = true;
             
             player.SetActive(false);
+            pianoPlayer.SetActive(true);
             cutsceneCam.SetActive(true);
             fam.SetActive(true);
+            
         }
     }
 
@@ -85,6 +88,11 @@ public class pianoTrigger : MonoBehaviour
                     humming = false;
                 }
                
+            }
+            creditTimer = creditTimer + 1;
+            if (creditTimer >= 1000)
+            {
+                credits.SetActive(true);
             }
 
             

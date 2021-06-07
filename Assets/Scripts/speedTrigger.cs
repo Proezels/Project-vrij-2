@@ -16,7 +16,7 @@ public class speedTrigger : MonoBehaviour
         {
             if (!slower)
             {
-                p1.speed = p1.speed - newSpeed;
+                p1.speed = p1.speed + newSpeed;
                 p1.stepSpeed = p1.stepSpeed - footstepTime;    
                 slower = true;
                 gameObject.GetComponent<AudioSource>().Play();

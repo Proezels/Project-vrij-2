@@ -12,6 +12,8 @@ public class studyDoor : MonoBehaviour
     public deleteRoom delete;
     public AudioClip[] audioArray;
     AudioSource audio;
+    AudioSource sound;
+    public AudioClip[] doorSounds;
 
 
     void Start()
@@ -46,11 +48,15 @@ public class studyDoor : MonoBehaviour
             delete.outside = true;
             anim.Play();
             coll.enabled = !coll.enabled;
+            sound.clip = doorSounds[1];
+            sound.Play();
         }
         else 
         {        
             audio.clip = audioArray[Random.Range(0, audioArray.Length)];
             audio.PlayOneShot(audio.clip);
+            sound.clip = doorSounds[1];
+            sound.Play();
         }
     }
 }

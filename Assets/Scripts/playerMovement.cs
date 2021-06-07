@@ -7,7 +7,7 @@ public class playerMovement : MonoBehaviour
     public CharacterController controller;
     public float speed = 12f;
     public bool maskOn = false;
-    public Animator anim;
+    private Animator anim;
 
     public AudioClip[] footsteps;
     public float stepTimer = 0f;
