@@ -19,6 +19,9 @@ public class pianoTrigger : MonoBehaviour
     public GameObject player;
     public GameObject fam;
     public GameObject pianoPlayer;
+    private float humTimer = 0f;
+    public float introSec = 19f;
+    public GameObject spaceText;
 
     public GameObject credits;
     private float creditTimer;
@@ -51,6 +54,7 @@ public class pianoTrigger : MonoBehaviour
         if (inFront && cutscene == false)
         {
             music.enabled = !music.enabled;
+            hum.Play();
             cutscene = true;
             
             player.SetActive(false);
@@ -66,6 +70,13 @@ public class pianoTrigger : MonoBehaviour
     {
         if (cutscene)
         {
+            humTimer += Time.deltaTime;
+            if (humTimer >= introSec)
+            {
+                humTimer = 0f;
+                spaceText.SetActive(true);
+            }
+
             if (Input.GetKey("space") && mute)
             {
                 humming = true;
