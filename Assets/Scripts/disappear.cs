@@ -10,6 +10,7 @@ public class disappear : MonoBehaviour
     public bool fading = false;
     float startTime;
     public GameObject fireflies;
+    public AudioSource parkNoise;
     [SerializeField] [Range (0f, 1f)] float lerpTime;
     [SerializeField] Color myColor;
 
@@ -40,6 +41,10 @@ public class disappear : MonoBehaviour
                     fadeIn = 1f;
                     if (park != null)
                     {
+                        if (parkNoise != null)
+                        {
+                            parkNoise.volume = parkNoise.volume - 0.001f;
+                        }
                         park.color = Color.Lerp(park.color, myColor, lerpTime);
                     }
                     if (fireflies != null)

@@ -31,7 +31,7 @@ public class playerMovement : MonoBehaviour
         if (controller.velocity != Vector3.zero)
         {
             stepTimer = stepTimer + 1f;
-            if (stepTimer == stepSpeed)
+            if (stepTimer >= stepSpeed)
             {
                 steps();
                 stepTimer = 0f;

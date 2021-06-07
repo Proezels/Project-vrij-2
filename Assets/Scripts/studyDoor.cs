@@ -21,6 +21,7 @@ public class studyDoor : MonoBehaviour
         anim = gameObject.GetComponent<Animation>();
         coll = gameObject.GetComponent<BoxCollider>();
         audio = GetComponent<AudioSource>();
+        sound = GetComponent<AudioSource>();
 
     }
 
@@ -55,7 +56,7 @@ public class studyDoor : MonoBehaviour
         {        
             audio.clip = audioArray[Random.Range(0, audioArray.Length)];
             audio.PlayOneShot(audio.clip);
-            sound.clip = doorSounds[1];
+            sound.clip = doorSounds[0];
             sound.Play();
         }
     }
