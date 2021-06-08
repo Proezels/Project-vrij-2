@@ -9,14 +9,14 @@ public class deleteRoom : MonoBehaviour
     public GameObject wall;
 
     public bool outside = false;
-    private AudioSource audio;
+    private AudioSource sound;
     public AudioClip[] rainClips;
 
     void Start()
     {
-        audio = GetComponent<AudioSource>();
-        audio.clip = rainClips[1];
-        audio.PlayOneShot(audio.clip);
+        sound = GetComponent<AudioSource>();
+        sound.clip = rainClips[1];
+        sound.PlayOneShot(sound.clip);
     }
 
     void OnTriggerEnter (Collider other)
@@ -33,8 +33,8 @@ public class deleteRoom : MonoBehaviour
     {
         if (outside)
         {
-            audio.clip = rainClips[0];
-            audio.PlayOneShot(audio.clip);
+            sound.clip = rainClips[0];
+            sound.PlayOneShot(sound.clip);
             outside = false;
         }
     }

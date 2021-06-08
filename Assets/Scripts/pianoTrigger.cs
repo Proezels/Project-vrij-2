@@ -5,7 +5,6 @@ using UnityEngine;
 public class pianoTrigger : MonoBehaviour
 {
     public bool inFront = false;
-    public treeLights tree;
     AudioSource music;
 
     public bool humming = false;
@@ -34,7 +33,7 @@ public class pianoTrigger : MonoBehaviour
 //check if player infront of piano
     void OnTriggerEnter (Collider other)
     {
-        if (other.name == "Player" && tree.lights)
+        if (other.name == "Player")
         {
             inFront = true;
         }
@@ -100,8 +99,8 @@ public class pianoTrigger : MonoBehaviour
                 }
                
             }
-            creditTimer = creditTimer + 1;
-            if (creditTimer >= 1000)
+            creditTimer += Time.deltaTime; 
+            if (creditTimer >= 90f)
             {
                 credits.SetActive(true);
             }

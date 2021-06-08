@@ -11,7 +11,7 @@ public class studyDoor : MonoBehaviour
     public GameObject rain;
     public deleteRoom delete;
     public AudioClip[] audioArray;
-    AudioSource audio;
+    AudioSource mAudio;
     AudioSource sound;
     public AudioClip[] doorSounds;
 
@@ -20,7 +20,7 @@ public class studyDoor : MonoBehaviour
     {
         anim = gameObject.GetComponent<Animation>();
         coll = gameObject.GetComponent<BoxCollider>();
-        audio = GetComponent<AudioSource>();
+        mAudio = GetComponent<AudioSource>();
         sound = GetComponent<AudioSource>();
 
     }
@@ -54,8 +54,8 @@ public class studyDoor : MonoBehaviour
         }
         else 
         {        
-            audio.clip = audioArray[Random.Range(0, audioArray.Length)];
-            audio.PlayOneShot(audio.clip);
+            mAudio.clip = audioArray[Random.Range(0, audioArray.Length)];
+            mAudio.PlayOneShot(mAudio.clip);
             sound.clip = doorSounds[0];
             sound.Play();
         }

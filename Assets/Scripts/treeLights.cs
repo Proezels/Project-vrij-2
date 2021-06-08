@@ -5,8 +5,13 @@ using UnityEngine;
 public class treeLights : MonoBehaviour
 {
     public Material shiny;
-    public bool lights = false;
     private bool atTree = false;
+    public GameObject spot;
+
+    void Start()
+    {
+        shiny.DisableKeyword("_EMISSION");
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -29,7 +34,7 @@ public class treeLights : MonoBehaviour
         if (atTree)
         {
             shiny.EnableKeyword("_EMISSION");
-            lights = true;
+            spot.SetActive(true);
         }
     }
 }
