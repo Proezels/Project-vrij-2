@@ -100,7 +100,7 @@ public class pianoTrigger : MonoBehaviour
                
             }
             creditTimer += Time.deltaTime; 
-            if (creditTimer >= 90f)
+            if (creditTimer >= 70f)
             {
                 credits.SetActive(true);
             }

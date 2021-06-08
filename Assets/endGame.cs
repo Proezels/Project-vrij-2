@@ -13,6 +13,7 @@ public class endGame : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 Debug.Log("End game");
+                Application.Quit();
             }
         }
     }
