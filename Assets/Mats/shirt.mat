@@ -36,4 +36,5 @@ Material:
     - _fade: 0
     m_Colors:
     - Color_24ffd7e4193949aba6bcd84be0f1dfcf: {r: 0.79684937, g: 0.8396226, b: 0.6447668, a: 0}
+    - Color_eb076a511a0b485cbff87e99adac9106: {r: 0.33784696, g: 0.7688124, b: 0.851, a: 1}
   m_BuildTextureStacks: []

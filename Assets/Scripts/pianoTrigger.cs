@@ -16,11 +16,15 @@ public class pianoTrigger : MonoBehaviour
 
     public GameObject cutsceneCam;
     public GameObject player;
-    public GameObject fam;
     public GameObject pianoPlayer;
     private float humTimer = 0f;
     public float introSec = 19f;
     public GameObject spaceText;
+
+    public GameObject dadKid;
+    public GameObject mom;
+    private bool ending = false;
+    
 
     public GameObject credits;
     private float creditTimer;
@@ -59,8 +63,6 @@ public class pianoTrigger : MonoBehaviour
             player.SetActive(false);
             pianoPlayer.SetActive(true);
             cutsceneCam.SetActive(true);
-            fam.SetActive(true);
-            
         }
     }
 
@@ -69,11 +71,32 @@ public class pianoTrigger : MonoBehaviour
     {
         if (cutscene)
         {
-            humTimer += Time.deltaTime;
+            if (!ending)
+            {
+                humTimer += Time.deltaTime;
+            }
+            
             if (humTimer >= introSec)
             {
-                humTimer = 0f;
                 spaceText.SetActive(true);
+            }
+
+            if (humTimer >= 30f)
+            {
+                mom.SetActive(true);
+            }
+
+            if (humTimer >= 45f)
+            {
+                dadKid.SetActive(true);
+            }
+            
+            if (humTimer >= 60f)
+            {
+                Animation anim = cutsceneCam.GetComponent<Animation>();
+                anim.Play();
+                humTimer = 0f;
+                ending = true;
             }
 
             if (Input.GetKey("space") && mute)
